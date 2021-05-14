@@ -1,8 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
+import GlobalStyle from './styles/GlobalStyles';
 
 const App: React.FC = () => {
+  const [show, setShow] = useState(false);
+
   return (
-    <h1>Hello world!</h1>
+   <>
+     <GlobalStyle />
+     <h1>Spotify</h1>
+   </>
   );
 };
 

@@ -7,8 +7,8 @@
   "license": "MIT",
   "scripts": {
     "build": "webpack",
-    "react:dev": "webpack serve --config ./webpack.react.js",
-    "electron:dev": "webpack --config ./webpack.electron.js && electron .",
+    "react:dev": "webpack serve --config ./webpack.react.js --mode=development",
+    "electron:dev": "nodemon",
     "dev": "npm-run-all -p react:dev electron:dev",
     "start": "npm run build && electron dist/main.js"
   },
@@ -17,9 +17,13 @@
     "@types/react-dom": "^17.0.5",
     "electron": "^12.0.7",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "react-icons": "^4.2.0",
+    "styled-components": "^5.3.0"
   },
   "devDependencies": {
+    "@types/react-icons": "^3.0.0",
+    "@types/styled-components": "^5.1.9",
     "concurrently": "^6.1.0",
     "electron-is-dev": "^2.0.0",
     "html-webpack-plugin": "^5.3.1",
